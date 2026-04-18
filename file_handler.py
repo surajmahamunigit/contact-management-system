@@ -25,4 +25,4 @@ def save_contacts(contacts:List[Dict]):
     """
     #Open the file
     with open(FILE_NAME,'w') as file:
-        json.dump(contacts)
+        json.dump(contacts, file)
