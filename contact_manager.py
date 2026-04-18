@@ -23,3 +23,27 @@ def view_contacts(contacts: List[dict])-> None:
         print(f"Name: {contact['name']}")
         print(f"Phone Number: {contact['phone']}")
         print(f"Email Address: {contact['email']}")
+
+
+def search_contacts(contacts:List[dict])-> None:
+    """Search contacts in the list"""
+
+    # [{'name':'john','phone':8182000},{'name':'den','phone':8182000}]
+
+    contact_name= input("Enter name:").strip().lower()
+
+    # List of contact
+    # Add contact to contact_list for every contact[name]=contact_name
+    contact_list=[contact for contact in contacts if contact_name in contact["name"].lower()]
+
+    # If contact_name is list
+    if not contact_list:
+        print("No contacts found")
+
+    for contact in contact_list:
+        print(f"{len(contact_list)} contact found:\n")
+        print(f"Name: {contact['name']}")
+        print(f"Phone Number: {contact['phone']}")
+        print(f"Email address: {contact['email']}")
+
+
