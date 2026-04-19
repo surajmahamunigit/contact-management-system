@@ -18,3 +18,9 @@ CLI-based application to manage contacts using Python with JSON persistence.
 
 ## Example
 Add → View → Search → Update → Delete
+
+## Screenshots
+
+![Add Contact](screenshots/add_contact.png)
+![View Contacts](screenshots/view-contacts.png)
+![Update Contact](screenshots/update_contact.png)
