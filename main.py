@@ -1,16 +1,17 @@
 from file_handler import save_contacts
-from contact_manager import add_contacts, view_contacts, search_contacts, delete_contact
+from contact_manager import add_contacts, view_contacts, search_contacts, delete_contact, update_contact
 from file_handler import load_contacts, save_contacts
 
 
 def display_menu():
-    print("Welcome to Contact Management System:")
+    print("\n Welcome to Contact Management System:")
     print("1. Add contacts")
     print("2. View contacts")
     print("3. Search contact:")
     print("4. Delete contact")
-    print("5. Save contact")
-    print("6. Exit")
+    print("5. Update contact")
+    print("6. Save contact")
+    print("7. Exit")
 
 
 
@@ -36,8 +37,10 @@ def main():
         elif option == "4":
             delete_contact(contacts)
         elif option == "5":
-            save_contacts(contacts)
+            update_contact(contacts)
         elif option == "6":
+            save_contacts(contacts)
+        elif option == "7":
             save_contacts(contacts)
             print("Exiting th application...")
             break
