@@ -8,7 +8,7 @@ def add_contacts(contacts: List[dict]):
     """Adds new contact to the list"""
 
     name=input("Enter your name:")
-    if not is_valid_name():
+    if not is_valid_name(name):
         print("Enter a valid name.")
 
     phone=input("Enter your phone number:")
