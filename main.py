@@ -1,5 +1,5 @@
 from file_handler import save_contacts
-from contact_manager import add_contacts, view_contacts, search_contacts
+from contact_manager import add_contacts, view_contacts, search_contacts, delete_contact
 from file_handler import load_contacts, save_contacts
 
 
@@ -33,8 +33,8 @@ def main():
             view_contacts(contacts)
         elif option == "3":
             search_contacts(contacts)
-       # elif option == "4":
-        #    delete_contact(contacts)
+        elif option == "4":
+            delete_contact(contacts)
         elif option == "5":
             save_contacts(contacts)
         elif option == "6":

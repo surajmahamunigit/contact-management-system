@@ -1,5 +1,6 @@
 import json
 from typing import List,Dict
+from file_handler import save_contacts
 
 
 def add_contacts(contacts: List[dict]):
@@ -45,5 +46,18 @@ def search_contacts(contacts:List[dict])-> None:
         print(f"Name: {contact['name']}")
         print(f"Phone Number: {contact['phone']}")
         print(f"Email address: {contact['email']}")
+
+
+def delete_contact(contacts: List[dict])-> None:
+    contact_name= input("Enter name:").strip().lower()
+
+    for contact in contacts:
+        if contact['name']==contact_name:
+            contacts.remove(contact)
+            print("Contact removed")
+            save_contacts(contacts)
+
+            return
+    print("Contact not found.")
 
 
