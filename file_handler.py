@@ -23,6 +23,9 @@ def save_contacts(contacts:List[Dict]):
     """
     Saves contacts to the JSON file
     """
-    #Open the file
+    # Sort it before saving
+    sorted_contacts = sorted(contacts, key=lambda x: x["name"].lower())
+
+    # Open the file
     with open(FILE_NAME,'w') as file:
-        json.dump(contacts, file)
+        json.dump(sorted_contacts, file)

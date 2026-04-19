@@ -1,4 +1,5 @@
 import json
+from utils import is_valid_name, is_valid_email, is_valid_phone
 from typing import List,Dict
 from file_handler import save_contacts
 
@@ -7,8 +8,16 @@ def add_contacts(contacts: List[dict]):
     """Adds new contact to the list"""
 
     name=input("Enter your name:")
+    if not is_valid_name():
+        print("Enter a valid name.")
+
     phone=input("Enter your phone number:")
+    if not is_valid_phone(phone):
+        print("Enter a valid phone number.")
+
     email=input("Enter your email address:")
+    if not is_valid_email(email):
+        print("Enter a valid email address.")
 
     contact={'name':name,'phone':phone,'email':email}
     contacts.append(contact)
